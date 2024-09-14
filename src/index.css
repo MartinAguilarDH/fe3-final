@@ -124,9 +124,25 @@ tr:nth-child(even) {
   color: white !important;
 }
 
+.Truedark > div > a{
+  color: white !important;
+} 
+
 .dark > a {
-  color: white;
+  color: white !important;
 }
+
+.dark > div > div > a{
+  color: white !important;
+}
+
+.dark > div > div > button{
+  background-color: white !important;
+} 
+
+.dark > div > div > p{
+  color: white !important;
+} 
 
 .rojo{
   color: red;
@@ -242,4 +258,24 @@ th, td {
 
 .m-10{
   margin: 20px;
+}
+
+body.dark {
+  background-color: #121212;
+  color: white;
+}
+
+body.light {
+  background-color: #ffffff;
+  color: black;
+}
+
+nav.dark-btn {
+  background-color: white;
+  color: black;
+}
+
+nav.light-btn {
+  background-color: black;
+  color: white;
 }

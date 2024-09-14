@@ -17,7 +17,7 @@ function App() {
           <Route path="/dentist/:id" element={<Detail />} />
           <Route path="/Favs" element={<Favs />} />
           <Route path="/contacto" element={<Contact />} />
-
+          <Route index element={<Home />} /> {}
         </Routes>
         <Footer />
       </div>
