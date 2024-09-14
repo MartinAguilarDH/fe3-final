@@ -1,19 +1,49 @@
-import React from 'react'
-
-
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
+import React, { useEffect, useState, useContext } from 'react';
+import { useParams } from 'react-router-dom'; // Importar el hook para obtener el parámetro de la URL
+import { ContextGlobal } from '../Components/utils/global.context'; // Importar el contexto global para el tema
 
 const Detail = () => {
- 
-  // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
+  const { id } = useParams(); // Obtener el id del dentista desde la URL
+  const { theme } = useContext(ContextGlobal); // Obtener el tema desde el contexto global
+  const [dentist, setDentist] = useState(null);
+
+  // Fetch para obtener los detalles del dentista
+  useEffect(() => {
+    fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
+      .then(response => response.json())
+      .then(data => setDentist(data))
+      .catch(error => console.error('Error fetching dentist details:', error));
+  }, [id]);
+
+  if (!dentist) {
+    return <div>Cargando...</div>; 
+  }
 
   return (
-    <>
-      <h1>Detail Dentist id </h1>
-      {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
-      {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
-    </>
-  )
-}
+    <main className={theme === 'dark' ? 'dark' : ''}>
+      <h1>Detail Dentist ID: {id}</h1>
+      <table>
+  <tr>
+    <td>Nombre</td>
+    <td>Email</td>
+    <td>Teléfono</td>
+    <td>Website</td>
+    <td>Compañía</td>
+    <td>Dirección</td>    
+  </tr>
+  <tr>
+    <td>{dentist.username}</td>
+    <td>{dentist.email}</td>
+    <td> {dentist.phone}</td>
+    <td>{dentist.website}</td>
+    <td>{dentist.company.name}</td>
+    <td>{`${dentist.address.street}, ${dentist.address.city}`}</td>
+  </tr>
 
-export default Detail
+
+</table>
+    </main>
+  );
+};
+
+export default Detail;

@@ -17,6 +17,7 @@ code {
   border: none;
   width: 100%;
   cursor: pointer;
+  margin: 5px;
 }
 
 h1{
@@ -25,7 +26,7 @@ h1{
 
 nav{
   display: flex;
-  width: 80vw;
+  width: 100vw;
   justify-content: flex-start;
   padding: 1rem;
 }
@@ -44,12 +45,12 @@ footer {
   display: flex;
   justify-content: center;
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
   position: relative;
   bottom: 0;
   width: 90%;
   height: 40px;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 footer > img{
@@ -117,6 +118,128 @@ tr:nth-child(even) {
   background-color: #12121296;
   color: white;
 }
+
+.Truedark{
+  background-color: #000000;
+  color: white !important;
+}
+
 .dark > a {
   color: white;
+}
+
+.rojo{
+  color: red;
+}
+
+/* estilos prueba */
+
+nav {
+        background-color: #f0f0f0; 
+        padding: 15px; 
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+    }
+
+    nav a {
+        text-decoration: none;
+        margin: 0 10px;
+        color: #333; 
+    }
+
+    .dark-button {
+      background-color: white;
+      color: black;
+      border: none;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      margin-right: 35px;
+    }
+    
+    .light-button {
+      background-color: black;
+      color: white;
+      border: none;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;      
+      margin-right: 35px;
+    }
+
+/*  Estilos footer  */
+
+footer {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+footer img:first-child { 
+  margin-right: auto;
+}
+
+footer img:nth-child(n+2) { 
+  margin-left: 10px; 
+}
+
+
+/* Estilos Cards */
+    .DentistaImg {
+      max-width: 100%; 
+      max-height: 100%; 
+      width: auto; 
+      height: auto; 
+      display: block;
+    }
+    
+
+    .TextImagenDentista{
+      padding: 15px; 
+      display: flex;
+      align-items: center; 
+  }
+
+  .IconoTamaño{
+    width: 20px;
+    height: 15px;
+}
+
+.TamanoRedes{
+  width: 30px;
+  height: 30px;
+}
+
+
+.Volverfooter {
+  background-color: red;
+  color: white; 
+  width: 100%;
+  text-align: center; 
+  cursor: pointer;
+}
+
+
+/* Estilos tabla */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align:   
+ left;
+}
+
+.EstiloImput{
+  width: 98%;
+  padding: 3px;
+}
+
+.m-10{
+  margin: 20px;
 }
